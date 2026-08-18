@@ -1,0 +1,28 @@
+{
+  "manifest_version": 3,
+  "name": "유튜브 재생목록 검색기",
+  "description": "유튜브 채널의 재생목록(플레이리스트) 안에 있는 동영상을 제목으로 검색/필터링합니다.",
+  "version": "1.0.0",
+  "default_locale": "ko",
+  "icons": {
+    "16": "icons/icon16.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  },
+  "action": {
+    "default_icon": {
+      "16": "icons/icon16.png",
+      "48": "icons/icon48.png",
+      "128": "icons/icon128.png"
+    },
+    "default_title": "재생목록 검색"
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://www.youtube.com/*"],
+      "js": ["content.js"],
+      "css": ["content.css"],
+      "run_at": "document_idle"
+    }
+  ]
+}
